@@ -1,0 +1,43 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+header ul {
+  display: flex;
+  gap: 2em;
+}
+
+.books {
+  margin: 2%;
+}
+
+.books li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.books div {
+  display: flex;
+  justify-content: space-between;
+  min-width: 50%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  margin-left: 2%;
+}
+
+span {
+  font-weight: 600;
+}

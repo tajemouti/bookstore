@@ -1,17 +1,17 @@
-const ADD = 'bookstore/books/ADD';
-const REMOVE = 'bookstore/books/REMOVE';
+import { createSlice } from '@reduxjs/toolkit';
 
-const booksReducers = (state = [], action) => {
-  const reducerMap = {
-    ADD: () => [...state, action.book],
-    REMOVE: () => state.filter((book) => book.id !== action.id),
-  };
+const booksSlice = createSlice({
+  name: 'books',
+  initialState: [],
+  reducers: {
+    addBook: (state, action) => {
+      state.push(action.payload);
+    },
+    removeBook: (state, action) => {
+      state.filter((book) => book.id !== action.payload);
+    },
+  },
+});
 
-  const reducerFunction = reducerMap[action.type];
-  return reducerFunction ? reducerFunction() : state;
-};
-
-const addBook = (book) => ({ type: ADD, book });
-const removeBook = (id) => ({ type: REMOVE, id });
-
-export { booksReducers, addBook, removeBook };
+export const { addBook, removeBook } = booksSlice.actions;
+export default booksSlice.reducer;

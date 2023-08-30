@@ -3,7 +3,7 @@ import Book from './Book';
 import Form from './Form';
 
 const BooksPage = () => {
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books.books);
 
   return (
     <>

@@ -1,6 +1,6 @@
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 
 const Form = () => {
@@ -21,7 +21,7 @@ const Form = () => {
     const id = uuidv4();
     dispatch(addBook({
       item_id: id, title, author, category: '',
-    })); // Empty category for now
+    }));
     setTitle('');
     setAuthor('');
   };

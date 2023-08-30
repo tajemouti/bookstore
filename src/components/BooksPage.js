@@ -1,20 +1,21 @@
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
 
 const BooksPage = () => {
-  const books = [
-    { id: uuidv4(), title: 'The Great Gatsby', author: 'Scott Fitzgerald' },
-    { id: uuidv4(), title: 'Moby Dick', author: 'Herman Melville' },
-    { id: uuidv4(), title: 'War and Peace', author: 'Leo Tolstoy' },
-    { id: uuidv4(), title: 'The Brothers Karamazov', author: 'Fyodor Dostoyevsky' },
-  ];
+  const books = useSelector((state) => state.books);
 
   return (
     <>
       <ul className="books">
         {books.map((book) => (
-          <Book key={book.id} title={book.title} author={book.author} />
+          <Book
+            key={book.item_id}
+            id={book.item_id}
+            title={book.title}
+            author={book.author}
+            category={book.category}
+          />
         ))}
       </ul>
       <Form />

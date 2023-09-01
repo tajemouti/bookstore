@@ -14,22 +14,24 @@ const Book = (props) => {
 
   return (
     <li className="book">
-      <div className="book-info">
-        <span className="category">{category}</span>
-        <span className="title">{title}</span>
-        <span className="author">{author}</span>
-      </div>
-      <div className="list-btn">
-        <button type="button">Comments </button>
-        |
-        <button
-          type="button"
-          onClick={handleRemoveClick}
-        >
-          Remove
-        </button>
-        |
-        <button type="button">Edit</button>
+      <div className="left-block">
+        <div className="book-info">
+          <span className="category">{category}</span>
+          <span className="title">{title}</span>
+          <span className="author">{author}</span>
+        </div>
+        <div className="list-btn">
+          <button type="button">Comments </button>
+          |
+          <button
+            type="button"
+            onClick={handleRemoveClick}
+          >
+            Remove
+          </button>
+          |
+          <button type="button">Edit</button>
+        </div>
       </div>
     </li>
   );

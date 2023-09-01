@@ -28,7 +28,7 @@ header ul {
 .books div {
   display: flex;
   justify-content: space-between;
-  min-width: 50%;
+  min-width: 25%;
 }
 
 form {

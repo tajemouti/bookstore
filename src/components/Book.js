@@ -14,23 +14,27 @@ const Book = (props) => {
 
   return (
     <li>
-      <p>
-        <span>Book title :</span>
-        {title}
-      </p>
+      <div>
+        <p>
+          <span>Book title :</span>
+          {title}
+        </p>
+      </div>
       <div>
         <p>
           <span>Author :</span>
           {author}
         </p>
+      </div>
+      <div>
         <p>
           <span>Category :</span>
           {category}
         </p>
-        <button type="button" onClick={handleRemoveClick}>
-          Remove
-        </button>
       </div>
+      <button type="button" onClick={handleRemoveClick}>
+        Remove
+      </button>
     </li>
   );
 };

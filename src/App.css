@@ -1,13 +1,15 @@
 #root {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
+  background: rgba(0, 0, 0, 0.05);
+  min-width: 100vw;
+  height: 100vh;
+  padding: 3%;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   margin: 2%;
+  background: #fff;
 }
 
 header ul {
@@ -19,16 +21,56 @@ header ul {
   margin: 2%;
 }
 
-.books li {
+.book {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1em;
   margin-top: 1em;
+  padding: 3%;
+  background: #fff;
 }
 
-.books div {
+.book-info {
   display: flex;
-  justify-content: space-between;
-  min-width: 25%;
+  flex-direction: column;
+}
+
+.category {
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.title {
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author {
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.list-btn {
+  display: flex;
+  gap: 1em;
+}
+
+.list-btn button {
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 form {

@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import avatar from '../avatar.svg';
 
 const Header = () => (
   <>
@@ -15,7 +16,7 @@ const Header = () => (
         </ul>
       </nav>
       <div>
-        <img src="" alt="Avatar" />
+        <img src={avatar} alt="Avatar" />
       </div>
     </header>
     <hr className="line" />

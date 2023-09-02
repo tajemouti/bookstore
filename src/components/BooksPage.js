@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchInitialBooks } from '../redux/books/booksSlice';
+import { fetchBooks } from '../redux/books/booksSlice';
 import Book from './Book';
 import Form from './Form';
 
@@ -9,7 +9,7 @@ const BooksPage = () => {
   const books = useSelector((state) => state.books.books);
 
   useEffect(() => {
-    dispatch(fetchInitialBooks());
+    dispatch(fetchBooks());
   }, [dispatch]);
 
   return (

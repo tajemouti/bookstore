@@ -33,17 +33,20 @@ const Book = (props) => {
           <button type="button">Edit</button>
         </div>
       </div>
-      <div className="reading-progress">
-        <div className="progress" />
-        <div className="progress-percentage">
-          <span className="percentage">76%</span>
-          <span className="completed">Completed</span>
+      <div className="right-block">
+        <div className="reading-progress">
+          <div className="progress" />
+          <div className="progress-percentage">
+            <span className="percentage">76%</span>
+            <span className="completed">Completed</span>
+          </div>
         </div>
-      </div>
-      <div className="current-chapter">
-        <span className="heading">CURRENT CHAPTER</span>
-        <span className="chapter">Chapter 17</span>
-        <button type="button" className="update-btn">UPDATE PROGRESS</button>
+        <hr className="vertical-line" />
+        <div className="current-chapter">
+          <span className="heading">CURRENT CHAPTER</span>
+          <span className="chapter">Chapter 17</span>
+          <button type="button" className="update-btn">UPDATE PROGRESS</button>
+        </div>
       </div>
     </li>
   );

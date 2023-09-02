@@ -51,9 +51,13 @@ header img {
 .books-link,
 .categories {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   letter-spacing: 1.9px;
   color: #f5f6fa;
+}
+
+.categories {
+  opacity: 0.5;
 }
 
 .logo {
@@ -69,10 +73,9 @@ header img {
 
 .book {
   display: flex;
-  justify-content: space-between;
   margin-top: 1em;
   padding: 3%;
-  padding-right: 10%;
+  padding-right: 7%;
   background: #fff;
   border: 0.5px solid #e8e8e8;
   border-radius: 5px;
@@ -82,6 +85,7 @@ header img {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  width: 45%;
 }
 
 .book-info {
@@ -142,6 +146,13 @@ form button {
   cursor: pointer;
 }
 
+.right-block {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  align-items: center;
+}
+
 .reading-progress {
   display: flex;
   align-items: center;
@@ -178,10 +189,18 @@ form button {
   color: #121212;
 }
 
+.vertical-line {
+  width: 0.125em;
+  height: 4.375em;
+  border: 1px solid #e8e8e8;
+  margin: 2%;
+}
+
 .current-chapter {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 1em;
 }
 
 .heading {
@@ -201,7 +220,7 @@ form button {
 }
 
 .update-btn {
-  width: 13em;
+  width: 12em;
   border-radius: 3px;
   background-color: #0290ff;
   font-family: 'Roboto Slab', serif;

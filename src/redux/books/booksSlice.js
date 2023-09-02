@@ -18,11 +18,6 @@ const removeBook = createAsyncThunk('books/removeBook', async (ITEM_ID) => {
   return response.data === 'The book was deleted successfully!' ? ITEM_ID : null;
 });
 
-export const fetchInitialBooks = createAsyncThunk('books/fetchInitialBooks', async () => {
-  const response = await axios.get(`${baseApiUrl}books`);
-  return response.data;
-});
-
 const initialState = {
   books: [],
   error: '',
@@ -92,25 +87,6 @@ export const booksSlice = createSlice({
         }
       })
       .addCase(removeBook.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message;
-      });
-
-    builder
-      .addCase(fetchInitialBooks.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchInitialBooks.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        const books = [];
-        const keys = Object.keys(action.payload);
-        keys.forEach((bookId) => {
-          books.push({ item_id: bookId, ...action.payload[bookId][0] });
-        });
-        state.books = books;
-        if (state.books.length === 0) state.error = 'No result was found!';
-      })
-      .addCase(fetchInitialBooks.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       });

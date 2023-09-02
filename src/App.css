@@ -45,10 +45,11 @@ header img {
 
 .line {
   height: 0.125em;
-  border: 1px solid #e8e8e8 ;
+  border: 1px solid #e8e8e8;
 }
 
-.books-link, .categories {
+.books-link,
+.categories {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   letter-spacing: 1.9px;
@@ -111,9 +112,25 @@ header img {
   color: #4386bf;
 }
 
+button {
+  border: none;
+}
+
 .list-btn {
   display: flex;
   gap: 1em;
+}
+
+form button {
+  width: 18%;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
 
 .list-btn button {
@@ -206,7 +223,7 @@ header img {
 
 .form-section hr {
   height: 0.125em;
-  border: 1px solid #e8e8e8 ;
+  border: 1px solid #e8e8e8;
   margin-top: 1em;
 }
 
@@ -239,22 +256,6 @@ form select {
   padding-left: 0.5em;
 }
 
-form button {
-  width: 18%;
-  border-radius: 3px;
-  background-color: #0290ff;
-  font-family: 'Roboto Slab', serif;
-  font-size: 0.8em;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: #fff;
-}
-
 .catego {
   margin-left: 5%;
-}
-
-button {
-  border: none;
 }

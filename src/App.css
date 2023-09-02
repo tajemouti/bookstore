@@ -5,14 +5,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 #root {
   margin: 8% 0;
   width: 84%;
-  height: 90%;
-  background: rgba(0, 0, 0, 0.05);
+  background: #fafafa;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.5);
 }
@@ -34,6 +32,11 @@ header {
 .navbar ul {
   display: flex;
   gap: 2em;
+}
+
+.line {
+  height: 0.125rem;
+  border: 1px solid #e8e8e8 ;
 }
 
 .books-link, .categories {
@@ -58,7 +61,7 @@ header {
   margin-top: 1em;
   padding: 3%;
   background: #fff;
-  border: 0.5px solid gray;
+  border: 0.5px solid #e8e8e8;
   border-radius: 5px;
 }
 
@@ -75,14 +78,14 @@ header {
 
 .category {
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.9em;
   font-weight: bold;
   color: #121212;
 }
 
 .title {
-  font-family: 'Roboto Slab', serif;;
+  font-family: 'Roboto Slab', serif;
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: -0.2px;
@@ -90,7 +93,7 @@ header {
 }
 
 .author {
-  font-family: 'Roboto Slab', serif;;
+  font-family: 'Roboto Slab', serif;
   font-size: 0.9em;
   font-weight: 300;
   color: #4386bf;
@@ -102,7 +105,7 @@ header {
 }
 
 .list-btn button {
-  font-family: 'Roboto Slab', serif;;
+  font-family: 'Roboto Slab', serif;
   font-size: 0.9em;
   font-weight: 300;
   color: #4386bf;
@@ -111,9 +114,56 @@ header {
   cursor: pointer;
 }
 
+.form-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 20% 5%;
+  gap: 2em;
+}
+
+.form-section hr {
+  height: 0.125rem;
+  border: 1px solid #e8e8e8 ;
+  margin-top: 1em;
+}
+
+.form-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
 form {
   display: flex;
-  justify-content: center;
-  gap: 0.5em;
-  margin-left: 2%;
+  justify-content: space-between;
+}
+
+form input {
+  height: 2.813rem;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  width: 28%;
+  padding-left: 0.5em;
+}
+
+form select {
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  width: 20%;
+  color: #888;
+  padding-left: 0.5em;
+}
+
+form button {
+  width: 18%;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
